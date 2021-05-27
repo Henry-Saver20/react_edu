@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-
+// The below code is part of the official REACT tutorial. Some is modified / my own additions
 class Square extends React.Component {
     render() {
       return (
@@ -131,4 +131,4 @@ class Square extends React.Component {
     }
     return null;
   }
-  
+  //End of tic-tac-toe Tutorial js
