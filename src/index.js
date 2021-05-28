@@ -2,6 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
+
+
+
+class Name extends React.Component {
+   constructor(props){
+      super(props);
+      this.state = {
+        c : ""
+      }
+
+  }
+ handleClick(i){
+  if(i === 0)
+  {
+    this.setState ({
+      c : "blue"
+    })
+  }
+  if(i === 1)
+  {
+    this.setState ({
+      c : "red"
+    })
+  }
+  if(i === 2)
+  {
+    this.setState ({
+      c : "green"
+    })
+  }
+ }
+  render() {
+    return (
+      <div>
+        <h1 style={{color:this.state.c}}>Henry Saver</h1> 
+        <button onClick={() => this.handleClick(0)}>Blue</button>
+        <button onClick={() => this.handleClick(1)}>Red</button>
+        <button onClick={() => this.handleClick(2)}>Green</button>
+      </div>
+    );
+  }
+}
 // The below code is part of the official REACT tutorial. Some is modified / my own additions
 class Square extends React.Component {
     render() {
@@ -88,18 +131,18 @@ class Square extends React.Component {
             status = 'Next player: ' + (this.state.xNext ? 'X' : 'O');
         }
       return (
+      <div className='container'>
+        <Name></Name>
         <div className="game">
           <div className="game-board">
             <Board squares={current.squares} onClick={(i) => this.handleClick(i)}/>
           </div>
           <div className="game-info">
             <div>{status}</div>
-            <ol>{/* TODO */}</ol>
-            <li>
                 <button onClick={() => this.handleBtn()}>Restart</button>
-            </li>
           </div>
         </div>
+      </div>
       );
     }
   }
