@@ -41,7 +41,32 @@ class Name extends React.Component {
         <button onClick={() => this.handleClick(0)}>Blue</button>
         <button onClick={() => this.handleClick(1)}>Red</button>
         <button onClick={() => this.handleClick(2)}>Green</button>
+        <Backg />
       </div>
+    );
+  }
+}
+
+class Backg extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      c : ""
+    }
+  }
+  colorHandler(i){
+    this.setState({
+      c : i
+    })
+  }
+  render() {
+    alert(this.state.c)
+    return (
+        <div>
+          <h1 style={{color:this.state.c}}>hola</h1>
+          <input type="text" id="col_hex" placeholder="Input a hex value"></input>
+          <button value="Submit Color" onClick={() => this.colorHandler("#1111")}>Submit a Color in Hex</button>
+        </div>
     );
   }
 }
@@ -132,6 +157,7 @@ class Square extends React.Component {
         }
       return (
       <div className='container'>
+        <backG></backG>
         <Name></Name>
         <div className="game">
           <div className="game-board">
@@ -151,7 +177,7 @@ class Square extends React.Component {
   
   ReactDOM.render(
     <Game />,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 
 
