@@ -36,12 +36,15 @@ class Name extends React.Component {
  }
   render() {
     return (
+    <div style={{display:"inline"}}>
       <div>
-        <h1 style={{color:this.state.c}}>Henry Saver</h1> 
+        <h1 class="cont2">Made with REACT</h1>
+        <h2 style={{color:this.state.c,backgroundColor:'white'}}>Henry Saver</h2> 
         <button onClick={() => this.handleClick(0)}>Blue</button>
         <button onClick={() => this.handleClick(1)}>Red</button>
         <button onClick={() => this.handleClick(2)}>Green</button>
       </div>
+    </div>
     );
   }
 }
@@ -165,6 +168,9 @@ class Square extends React.Component {
       return (
       <div className='container'>
         <Name></Name>
+        <div>
+        <h1>Tic-Tac-Toe</h1>
+      </div>
         <div className="game">
           <div className="game-board">
             <Board squares={current.squares} onClick={(i) => this.handleClick(i)}/>
