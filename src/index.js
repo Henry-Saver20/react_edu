@@ -141,6 +141,8 @@ class Square extends React.Component {
             xNext: true,
           })
     }
+    // Ywins = 0;
+    // Xwins = 0;
     render() {
         const history = this.state.history;
         const current = history[history.length - 1];
@@ -149,6 +151,12 @@ class Square extends React.Component {
         if (winner) 
         {
             status = 'Winner: ' + winner;
+            // if(winner === 'X'){
+            //   var w = 
+            //   // this.setState({
+            //   //   Xwins: w
+            //   // })
+            // }
         } 
         else 
         {
@@ -156,7 +164,6 @@ class Square extends React.Component {
         }
       return (
       <div className='container'>
-        <backG></backG>
         <Name></Name>
         <div className="game">
           <div className="game-board">
