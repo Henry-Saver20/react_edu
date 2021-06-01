@@ -41,7 +41,6 @@ class Name extends React.Component {
         <button onClick={() => this.handleClick(0)}>Blue</button>
         <button onClick={() => this.handleClick(1)}>Red</button>
         <button onClick={() => this.handleClick(2)}>Green</button>
-        <Backg />
       </div>
     );
   }
@@ -60,12 +59,12 @@ class Backg extends React.Component {
     })
   }
   render() {
-    alert(this.state.c)
+    //alert(this.state.c)
     return (
         <div>
-          <h1 style={{color:this.state.c}}>hola</h1>
+          <h1 style={{color:this.state.c}}>Hex Color Picker!</h1>
           <input type="text" id="col_hex" placeholder="Input a hex value"></input>
-          <button value="Submit Color" onClick={() => this.colorHandler("#1111")}>Submit a Color in Hex</button>
+          <button value="Submit Color" onClick={() => this.colorHandler(document.getElementById("col_hex").value)}>Submit a Color in Hex</button>
         </div>
     );
   }
@@ -168,6 +167,7 @@ class Square extends React.Component {
                 <button onClick={() => this.handleBtn()}>Restart</button>
           </div>
         </div>
+        <Backg />
       </div>
       );
     }
