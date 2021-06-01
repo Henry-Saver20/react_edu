@@ -55,4 +55,9 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  #d1{
+    border-width: 2px;
+    border-radius: 2px;
+  }
   

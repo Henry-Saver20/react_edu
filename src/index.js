@@ -61,7 +61,7 @@ class Backg extends React.Component {
   render() {
     //alert(this.state.c)
     return (
-        <div>
+        <div id="d1" style={{borderColor:this.state.c}}>
           <h1 style={{color:this.state.c}}>Hex Color Picker!</h1>
           <input type="text" id="col_hex" placeholder="Input a hex value"></input>
           <button value="Submit Color" onClick={() => this.colorHandler(document.getElementById("col_hex").value)}>Submit a Color in Hex</button>
